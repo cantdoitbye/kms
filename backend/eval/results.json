@@ -1,0 +1,999 @@
+{
+  "retrieval": {
+    "vector": {
+      "n": 40,
+      "hit@1": 0.625,
+      "hit@3": 0.975,
+      "hit@5": 1.0,
+      "mrr@10": 0.785,
+      "p50_ms": 15.8,
+      "top5_context_chars": 3967,
+      "by_type": {
+        "lexical": {
+          "n": 12,
+          "hit@1": 0.833,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 0.917
+        },
+        "paraphrase": {
+          "n": 24,
+          "hit@1": 0.542,
+          "hit@3": 0.958,
+          "hit@5": 1.0,
+          "mrr@10": 0.74
+        },
+        "identifier": {
+          "n": 4,
+          "hit@1": 0.5,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 0.667
+        }
+      },
+      "misses": []
+    },
+    "keyword": {
+      "n": 40,
+      "hit@1": 0.85,
+      "hit@3": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.908,
+      "p50_ms": 4.0,
+      "top5_context_chars": 3834,
+      "by_type": {
+        "lexical": {
+          "n": 12,
+          "hit@1": 0.917,
+          "hit@3": 0.917,
+          "hit@5": 1.0,
+          "mrr@10": 0.938
+        },
+        "paraphrase": {
+          "n": 24,
+          "hit@1": 0.833,
+          "hit@3": 0.958,
+          "hit@5": 1.0,
+          "mrr@10": 0.899
+        },
+        "identifier": {
+          "n": 4,
+          "hit@1": 0.75,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 0.875
+        }
+      },
+      "misses": []
+    },
+    "hybrid": {
+      "n": 40,
+      "hit@1": 0.825,
+      "hit@3": 0.975,
+      "hit@5": 1.0,
+      "mrr@10": 0.902,
+      "p50_ms": 21.9,
+      "top5_context_chars": 4100,
+      "by_type": {
+        "lexical": {
+          "n": 12,
+          "hit@1": 0.917,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 0.958
+        },
+        "paraphrase": {
+          "n": 24,
+          "hit@1": 0.792,
+          "hit@3": 0.958,
+          "hit@5": 1.0,
+          "mrr@10": 0.878
+        },
+        "identifier": {
+          "n": 4,
+          "hit@1": 0.75,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 0.875
+        }
+      },
+      "misses": []
+    },
+    "hybrid_rerank": {
+      "n": 40,
+      "hit@1": 0.95,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 635.1,
+      "top5_context_chars": 4211,
+      "by_type": {
+        "lexical": {
+          "n": 12,
+          "hit@1": 1.0,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 1.0
+        },
+        "paraphrase": {
+          "n": 24,
+          "hit@1": 0.958,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 0.979
+        },
+        "identifier": {
+          "n": 4,
+          "hit@1": 0.75,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "mrr@10": 0.875
+        }
+      },
+      "misses": []
+    }
+  },
+  "answers": {
+    "n_answerable": 40,
+    "correct": 1.0,
+    "faithful": 1.0,
+    "citation_hit": 1.0,
+    "n_unanswerable": 3,
+    "abstention": 1.0,
+    "p50_latency_ms": 10555.6,
+    "claims_total": 44,
+    "claim_support_rate": 0.975,
+    "answers_with_uncited_sentence": 0.05,
+    "rows": [
+      {
+        "question": "How many days of paid annual leave do employees get?",
+        "answer": "Employees receive 24 days of paid annual leave per calendar year, accrued at 2 days each month[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Employees receive 24 days of paid annual leave per calendar year, accrued at 2 days each month.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states 24 days per year accrued monthly at 2 days per month"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the 24 days of paid annual leave as given in the source.",
+        "latency_ms": 1992.4
+      },
+      {
+        "question": "Until when can I use leave days carried over from last year?",
+        "answer": "Unused annual-leave days that are carried over to the next year must be used by 31 March, after which they expire[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Unused annual-leave days that are carried over to the next year must be used by 31 March, after which they expire.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states carried\u2011over days expire on 31\u202fMarch, implying they must be used by then."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the carry\u2011over leave expires on 31\u202fMarch, matching the source.",
+        "latency_ms": 1843.1
+      },
+      {
+        "question": "Do I need a doctor's note when I'm off sick?",
+        "answer": "A medical certificate is required only if your sick leave exceeds 3 consecutive days; otherwise, no doctor\u2019s note is needed[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "A medical certificate is required only if your sick leave exceeds 3 consecutive days; otherwise, no doctor\u2019s note is needed.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states a medical certificate is required only for sick leave longer than 3 consecutive days, matching the claim."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer matches the reference fact and is fully supported by the passage.",
+        "latency_ms": 1443.5
+      },
+      {
+        "question": "How much parental leave does a non-birthing parent get?",
+        "answer": "Non-birthing parents receive 12 weeks of fully paid parental leave, which can be taken in up to three blocks within the first 12 months after the child\u2019s arrival[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Non-birthing parents receive 12 weeks of fully paid parental leave, which can be taken in up to three blocks within the first 12 months after the child\u2019s arrival.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states non-birthing parents receive 12 weeks fully paid leave, taken in up to three blocks within first 12 months."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer correctly states 12 weeks and includes supported detail",
+        "latency_ms": 1769.8
+      },
+      {
+        "question": "Which days do office-based employees have to come in?",
+        "answer": "Office-based employees are required to be on-site on **Tuesdays and Thursdays** each week[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Office-based employees are required to be on-site on Tuesdays and Thursdays each week.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states office-attached employees must be on-site on Tuesdays and Thursdays."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the on-site days and all claims are supported by the passage.",
+        "latency_ms": 8100.9
+      },
+      {
+        "question": "How long am I allowed to work from abroad?",
+        "answer": "You may work from another country for up to 30 calendar days per year, provided you obtain the required approvals. [1]",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "You may work from another country for up to 30 calendar days per year, provided you obtain the required approvals.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the 30\u2011day limit and required approvals"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the reference fact and is fully supported by source 1.",
+        "latency_ms": 10161.7
+      },
+      {
+        "question": "What is the yearly budget for courses and conferences?",
+        "answer": "Each employee receives an annual learning budget of INR 75,000 (\u2248 EUR 900) for books, courses and conferences[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Each employee receives an annual learning budget of INR 75,000 (\u2248 EUR 900) for books, courses and conferences.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the exact amount and purpose"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the reference fact and is fully supported by the passage.",
+        "latency_ms": 13043.6
+      },
+      {
+        "question": "Can I fly premium economy on a long trip?",
+        "answer": "Yes. For business travel, flights that are six hours or longer may be booked in premium economy[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "For business travel, flights that are six hours or longer may be booked in premium economy.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states flights of 6 hours or longer may be booked in premium economy."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states that flights of six hours or longer may be booked in premium economy, matching the passage.",
+        "latency_ms": 14922.1
+      },
+      {
+        "question": "I clicked a phishing link. How soon do I have to tell someone?",
+        "answer": "You must report the incident within 1 hour of discovery[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "You must report the incident within 1 hour of discovery.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states incidents must be reported within 1 hour of discovery"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the reference fact and is supported by the passage.",
+        "latency_ms": 8500.6
+      },
+      {
+        "question": "When does the whole company shut down for a holiday break?",
+        "answer": "The entire company closes for a \u201cRecharge Week\u201d during the last week of December[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The entire company closes for a \u201cRecharge Week\u201d during the last week of December.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the whole company closes for a Recharge Week in the last week of December"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the company shuts down in the last week of December, supported by the passage.",
+        "latency_ms": 8979.3
+      },
+      {
+        "question": "Who has to approve a promotion to L5?",
+        "answer": "A promotion to L5 requires approval from the CTO[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "A promotion to L5 requires approval from the CTO.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states promotions to L5 and above need CTO approval"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states that L5 promotion needs CTO approval, which is supported by the passage.",
+        "latency_ms": 5678.8
+      },
+      {
+        "question": "What is the notice period for senior staff?",
+        "answer": "The notice period for senior staff (levels L4 and above) is 60 days[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The notice period for senior staff (levels L4 and above) is 60 days.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states notice period is 60 days for L4 and above, matching the claim."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the 60\u2011day notice period for L4 and above, matching the source.",
+        "latency_ms": 6843.3
+      },
+      {
+        "question": "How much does the company contribute to retirement savings?",
+        "answer": "The company matches pension or provident-fund contributions up to 6 % of an employee\u2019s base salary[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The company matches pension or provident-fund contributions up to 6 % of an employee\u2019s base salary.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the company matches pension or provident-fund contributions up to 6% of base salary."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the company matches contributions up to 6% of base salary, which is supported by the passage.",
+        "latency_ms": 13874.9
+      },
+      {
+        "question": "What can the wellness allowance be spent on?",
+        "answer": "The wellness allowance can be used for gym memberships, therapy, sports equipment, or fitness apps[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The wellness allowance can be used for gym memberships, therapy, sports equipment, or fitness apps.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the wellness allowance is usable for gym memberships, therapy, sports equipment or fitness apps."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer lists the allowed uses exactly as in the source.",
+        "latency_ms": 8894.3
+      },
+      {
+        "question": "Which purchases need sign-off before I buy them?",
+        "answer": "Purchases exceeding INR 50,000 (\u2248 EUR 600) must receive pre-approval before the money is spent[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Purchases exceeding INR 50,000 (\u2248 EUR 600) must receive pre-approval before the money is spent.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states purchases above INR 50,000 (EUR 600) require pre\u2011approval before spending."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer correctly identifies purchases over INR\u202f50,000 require pre\u2011approval before spending",
+        "latency_ms": 10980.0
+      },
+      {
+        "question": "When can a new engineer join the primary on-call rotation?",
+        "answer": "A new engineer may join the primary on-call rotation only after they have been at Northwind Labs for at least 8 weeks and have completed two shadow shifts[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "A new engineer may join the primary on-call rotation only after they have been at Northwind Labs for at least 8 weeks and have completed two shadow shifts.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source explicitly states the 8\u2011week tenure and two shadow shifts requirement."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer includes the 8\u2011week requirement and correctly adds the supported detail about two shadow shifts",
+        "latency_ms": 10902.2
+      },
+      {
+        "question": "What language is the query service written in?",
+        "answer": "The query service is written in Rust[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The query service is written in Rust.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the query service is written in Rust"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the query service is written in Rust, which is supported by the passage.",
+        "latency_ms": 9938.2
+      },
+      {
+        "question": "Which team owns the Feature Flags service?",
+        "answer": "The Feature Flags service is owned by the **Platform** team[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The Feature Flags service is owned by the Platform team.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source table lists Feature Flags with Owner team = Platform"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Source 1 lists Platform as the owner team for Feature Flags",
+        "latency_ms": 11785.7
+      },
+      {
+        "question": "How many reviewers must approve a change to billing code?",
+        "answer": "Two approvals are required for changes to the billing service, and one of those reviewers must be a senior engineer (L5 or above)[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Two approvals are required for changes to the billing service, and one of those reviewers must be a senior engineer (L5 or above).",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states billing service changes need two approvals, one from a senior engineer (L5+)."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states two approvals are needed, matching the source.",
+        "latency_ms": 9019.2
+      },
+      {
+        "question": "How does a production rollout progress?",
+        "answer": "The rollout starts with 5 % of traffic for 15 minutes, then expands to 25 % of traffic for another 15 minutes, and finally reaches 100 % of traffic. [1]",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The rollout starts with 5 % of traffic for 15 minutes, then expands to 25 % of traffic for another 15 minutes, and finally reaches 100 % of traffic.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states rollout progresses exactly as described"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the rollout steps described in the passage.",
+        "latency_ms": 8201.6
+      },
+      {
+        "question": "When does a deploy get reverted automatically?",
+        "answer": "A deploy is automatically rolled back when, during any rollout stage, either:\n\n* the error rate climbs more than 2 percentage points above the baseline, **or**  \n* the p99 latency rises by more than 30 percent compared to the baseline.  \n\nThese conditions trigger the pipeline\u2019s automatic rollback [1]",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "A deploy is automatically rolled back when, during any rollout stage, either:",
+            "refs": [],
+            "verdict": "uncited",
+            "reason": "No citation given."
+          },
+          {
+            "text": "the error rate climbs more than 2 percentage points above the baseline, or",
+            "refs": [],
+            "verdict": "uncited",
+            "reason": "No citation given."
+          },
+          {
+            "text": "the p99 latency rises by more than 30 percent compared to the baseline.",
+            "refs": [],
+            "verdict": "uncited",
+            "reason": "No citation given."
+          },
+          {
+            "text": "These conditions trigger the pipeline\u2019s automatic rollback",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the pipeline rolls back if error rate exceeds 2 percentage points or p99 latency rises >30%"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer includes the error\u2011rate condition and matches the source, and all claims are supported by the passage",
+        "latency_ms": 10684.9
+      },
+      {
+        "question": "Can I ship to production on a Friday afternoon?",
+        "answer": "No. Production deployments are prohibited on Fridays after 15:00 local time (unless it\u2019s an incident-fix approved by the incident commander)[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Production deployments are prohibited on Fridays after 15:00 local time (unless it\u2019s an incident-fix approved by the incident commander).",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states production deploys are not allowed on Fridays after 15:00 unless approved as an incident fix by the incident commander."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer correctly states the restriction and includes no unsupported claims",
+        "latency_ms": 9583.2
+      },
+      {
+        "question": "How quickly must the primary on-call acknowledge a page?",
+        "answer": "The primary on-call engineer must acknowledge a page within 5 minutes[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The primary on-call engineer must acknowledge a page within 5 minutes.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the primary on-call engineer must acknowledge pages within 5 minutes"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer correctly states the 5\u2011minute acknowledgment requirement and all claims are supported by the passage.",
+        "latency_ms": 10555.6
+      },
+      {
+        "question": "How much extra pay do on-call engineers get?",
+        "answer": "On-call engineers receive a stipend of INR 8,000 per week in addition to their regular salary[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "On-call engineers receive a stipend of INR 8,000 per week in addition to their regular salary.",
+            "refs": [
+              1
+            ],
+            "verdict": "unsupported",
+            "reason": "Source mentions stipend but does not state it is in addition to regular salary"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the INR\u202f8,000 weekly stipend and makes no unsupported claims.",
+        "latency_ms": 12959.0
+      },
+      {
+        "question": "What does SEV2 mean?",
+        "answer": "SEV2 indicates a major feature is degraded for many customers[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "SEV2 indicates a major feature is degraded for many customers.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states SEV2 means a major feature is degraded for many customers"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the reference fact and is supported by source 1",
+        "latency_ms": 11673.0
+      },
+      {
+        "question": "What test data do I use when running services on my laptop?",
+        "answer": "When you run the services locally, the environment uses the synthetic dataset named **\u201cAcme Demo.\u201d** It contains 30 days of generated events for five fictional customers[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "When you run the services locally, the environment uses the synthetic dataset named \u201cAcme Demo.\u201d It contains 30 days of generated events for five fictional customers.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the synthetic dataset 'Acme Demo' is used locally and contains 30 days of generated events for 5 fictional customers."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the reference fact and is fully supported by the passage.",
+        "latency_ms": 12238.8
+      },
+      {
+        "question": "What was the root cause of INC-2047?",
+        "answer": "The incident was caused by a non-backward-compatible schema migration that was deployed together with application code, which locked the invoices table for 14 minutes. During this lock the nightly invoice job timed out, retried already-processed batches, and because the payment step lacked an idempotency key, customers in those batches were charged again[2].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The incident was caused by a non-backward-compatible schema migration that was deployed together with application code, which locked the invoices table for 14 minutes.",
+            "refs": [],
+            "verdict": "uncited",
+            "reason": "No citation given."
+          },
+          {
+            "text": "During this lock the nightly invoice job timed out, retried already-processed batches, and because the payment step lacked an idempotency key, customers in those batches were charged again.",
+            "refs": [
+              2
+            ],
+            "verdict": "supported",
+            "reason": "Source directly states the timeout, retry of batches, and lack of idempotency causing double charges."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer accurately reflects the root cause described in the passages",
+        "latency_ms": 10791.0
+      },
+      {
+        "question": "How many customers were billed twice?",
+        "answer": "41 customers were billed twice[2].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "41 customers were billed twice.",
+            "refs": [
+              2
+            ],
+            "verdict": "supported",
+            "reason": "Source states 41 customers were double-charged"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer gives the correct number (41) and the claim is supported by the passages.",
+        "latency_ms": 11923.8
+      },
+      {
+        "question": "How long did the invoice outage last?",
+        "answer": "The outage lasted 2 hours 47 minutes, from 09:12 IST to 11:59 IST[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The outage lasted 2 hours 47 minutes, from 09:12 IST to 11:59 IST.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states duration 2 hours 47 minutes (09:12 to 11:59 IST)"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Matches the duration stated in the source.",
+        "latency_ms": 10002.3
+      },
+      {
+        "question": "Who led the response to the billing incident?",
+        "answer": "Riya Deshpande led the response as the incident commander[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Riya Deshpande led the response as the incident commander.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states incident commander was Riya Deshpande"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly identifies Riya Deshpande as the incident commander per the passage.",
+        "latency_ms": 8837.5
+      },
+      {
+        "question": "Why was nobody paged when the invoice job timed out?",
+        "answer": "The invoice job\u2019s timeout was only logged at **WARNING** level, which did not trigger an alert, so the on-call engineer was never paged for the failure[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The invoice job\u2019s timeout was only logged at WARNING level, which did not trigger an alert, so the on-call engineer was never paged for the failure.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the timeout was logged at WARNING level and did not trigger an alert, so the engineer was not paged."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Matches the passage stating the timeout was logged at WARNING level and thus no page was sent",
+        "latency_ms": 10552.7
+      },
+      {
+        "question": "When is the CI check that blocks migrations mixed with code due?",
+        "answer": "The CI check that blocks pull requests containing both a schema migration and application code is due on 30 September 2026[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The CI check that blocks pull requests containing both a schema migration and application code is due on 30 September 2026.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the CI check is due 30 September 2026"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly gives the due date and it is supported by the passage.",
+        "latency_ms": 10821.1
+      },
+      {
+        "question": "How much does the Growth plan cost?",
+        "answer": "The Growth plan costs USD 249 per month[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "The Growth plan costs USD 249 per month.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the Growth plan costs USD 249 per month."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the Growth plan cost and cites the supporting passage.",
+        "latency_ms": 13737.5
+      },
+      {
+        "question": "What do we pay if we go over our event quota?",
+        "answer": "If you exceed the monthly event quota on a paid plan, each extra event costs USD 0.00002 (equivalent to USD 20 per additional million events)[2].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "If you exceed the monthly event quota on a paid plan, each extra event costs USD 0.00002 (equivalent to USD 20 per additional million events).",
+            "refs": [
+              2
+            ],
+            "verdict": "supported",
+            "reason": "Source states extra events cost $0.00002 each, equivalent to $20 per extra million"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the over\u2011quota cost and all details are supported by the provided passage.",
+        "latency_ms": 14784.2
+      },
+      {
+        "question": "What uptime is guaranteed for Enterprise customers?",
+        "answer": "Enterprise customers receive a 99.95% monthly uptime SLA[1][2].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Enterprise customers receive a 99.95% monthly uptime SLA.",
+            "refs": [
+              1,
+              2
+            ],
+            "verdict": "supported",
+            "reason": "Both sources state Enterprise customers have a 99.95% uptime SLA"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the 99.95% SLA and all claims are supported by the passages.",
+        "latency_ms": 17771.1
+      },
+      {
+        "question": "Can our analytics data be hosted in India?",
+        "answer": "Yes. Customers on an Enterprise plan can choose to store their analytics data in the India (Mumbai) region [1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Customers on an Enterprise plan can choose to store their analytics data in the India (Mumbai) region.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states India (Mumbai) region is available for Enterprise customers"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the reference fact and is fully supported by the passage.",
+        "latency_ms": 14758.8
+      },
+      {
+        "question": "Is there an SDK for Android and iPhone apps?",
+        "answer": "Yes. Orbit provides official SDKs for Android (Kotlin) and iPhone (Swift) apps[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Orbit provides official SDKs for Android (Kotlin) and iPhone (Swift) apps.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states SDKs for Android (Kotlin) and iOS (Swift)"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the SDKs for Android (Kotlin) and iPhone (Swift) as given in the source.",
+        "latency_ms": 15179.7
+      },
+      {
+        "question": "How fast are GDPR deletion requests handled?",
+        "answer": "Deletion requests for individual end users are processed within 7 days via the User Deletion API[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Deletion requests for individual end users are processed within 7 days via the User Deletion API.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states the same sentence"
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer correctly states the 7\u2011day processing time and all claims are supported by the provided passage.",
+        "latency_ms": 11694.0
+      },
+      {
+        "question": "How quickly does support reply to Scale customers?",
+        "answer": "Scale customers receive email and chat support with a first-response target of 4 hours[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "Scale customers receive email and chat support with a first-response target of 4 hours.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states Scale customers get email and chat support with a 4-hour first-response target."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "The answer matches the passage stating Scale customers have a 4-hour first-response target.",
+        "latency_ms": 13626.0
+      },
+      {
+        "question": "What happens to our data after we cancel?",
+        "answer": "After you cancel, your data is retained for 30 days and then it is permanently deleted[1].",
+        "answerable": true,
+        "claims": [
+          {
+            "text": "After you cancel, your data is retained for 30 days and then it is permanently deleted.",
+            "refs": [
+              1
+            ],
+            "verdict": "supported",
+            "reason": "Source states data is kept for 30 days after cancellation then permanently deleted."
+          }
+        ],
+        "citation_hit": true,
+        "correct": true,
+        "faithful": true,
+        "reason": "Answer matches the reference fact and is supported by source 1",
+        "latency_ms": 11364.7
+      },
+      {
+        "question": "What is the CEO's salary?",
+        "answer": "I couldn't find this in the knowledge base.",
+        "answerable": false,
+        "claims": [],
+        "abstained": true,
+        "latency_ms": 7965.3
+      },
+      {
+        "question": "Does Northwind Labs offer employee stock options?",
+        "answer": "I couldn't find this in the knowledge base.",
+        "answerable": false,
+        "claims": [],
+        "abstained": true,
+        "latency_ms": 4940.6
+      },
+      {
+        "question": "What is the price of the Orbit Analytics mobile app on the App Store?",
+        "answer": "I couldn't find this in the knowledge base.",
+        "answerable": false,
+        "claims": [],
+        "abstained": true,
+        "latency_ms": 7838.3
+      }
+    ]
+  }
+}

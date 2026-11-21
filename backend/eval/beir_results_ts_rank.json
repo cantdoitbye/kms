@@ -1,0 +1,34 @@
+{
+  "index": {
+    "docs": 5183,
+    "chunks": 6659,
+    "index_seconds": 891
+  },
+  "candidates": 20,
+  "results": {
+    "vector": {
+      "ndcg@10": 0.7115,
+      "recall@10": 0.8262,
+      "mrr@10": 0.6829,
+      "p50_ms": 40.2
+    },
+    "keyword": {
+      "ndcg@10": 0.3898,
+      "recall@10": 0.5359,
+      "mrr@10": 0.3484,
+      "p50_ms": 45.0
+    },
+    "hybrid": {
+      "ndcg@10": 0.6379,
+      "recall@10": 0.7826,
+      "mrr@10": 0.5998,
+      "p50_ms": 74.2
+    },
+    "hybrid_rerank": {
+      "ndcg@10": 0.706,
+      "recall@10": 0.8246,
+      "mrr@10": 0.675,
+      "p50_ms": 1631.3
+    }
+  }
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "variant": "Full system",
+    "description": "400-token chunks, 60 overlap, contextual headers, BGE query prefix, 20 candidates",
+    "chunks": 25,
+    "avg_tokens": 154,
+    "vector": {
+      "hit@1": 0.625,
+      "hit@5": 1.0,
+      "mrr@10": 0.785,
+      "p50_ms": 17.1,
+      "top5_context_chars": 3967
+    },
+    "hybrid": {
+      "hit@1": 0.825,
+      "hit@5": 1.0,
+      "mrr@10": 0.902,
+      "p50_ms": 21.9,
+      "top5_context_chars": 4100
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 607.4,
+      "top5_context_chars": 4211
+    }
+  },
+  {
+    "variant": "No contextual headers",
+    "description": "embed chunk text without '{title} > {section}'",
+    "chunks": 25,
+    "avg_tokens": 154,
+    "vector": {
+      "hit@1": 0.65,
+      "hit@5": 1.0,
+      "mrr@10": 0.797,
+      "p50_ms": 14.7,
+      "top5_context_chars": 4037
+    },
+    "hybrid": {
+      "hit@1": 0.825,
+      "hit@5": 1.0,
+      "mrr@10": 0.898,
+      "p50_ms": 20.2,
+      "top5_context_chars": 4078
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 636.8,
+      "top5_context_chars": 4201
+    }
+  },
+  {
+    "variant": "No query instruction",
+    "description": "embed the raw question without BGE's retrieval prefix",
+    "chunks": 25,
+    "avg_tokens": 154,
+    "vector": {
+      "hit@1": 0.6,
+      "hit@5": 1.0,
+      "mrr@10": 0.777,
+      "p50_ms": 16.9,
+      "top5_context_chars": 3856
+    },
+    "hybrid": {
+      "hit@1": 0.8,
+      "hit@5": 1.0,
+      "mrr@10": 0.89,
+      "p50_ms": 21.3,
+      "top5_context_chars": 4063
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 613.9,
+      "top5_context_chars": 4230
+    }
+  },
+  {
+    "variant": "No overlap",
+    "description": "consecutive chunks share no sentences",
+    "chunks": 25,
+    "avg_tokens": 151,
+    "vector": {
+      "hit@1": 0.675,
+      "hit@5": 1.0,
+      "mrr@10": 0.819,
+      "p50_ms": 17.1,
+      "top5_context_chars": 3785
+    },
+    "hybrid": {
+      "hit@1": 0.85,
+      "hit@5": 1.0,
+      "mrr@10": 0.919,
+      "p50_ms": 32.7,
+      "top5_context_chars": 4034
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.975,
+      "hit@5": 1.0,
+      "mrr@10": 0.988,
+      "p50_ms": 554.1,
+      "top5_context_chars": 4232
+    }
+  },
+  {
+    "variant": "Smaller chunks (200)",
+    "description": "max 200 tokens per chunk",
+    "chunks": 32,
+    "avg_tokens": 125,
+    "vector": {
+      "hit@1": 0.675,
+      "hit@5": 1.0,
+      "mrr@10": 0.797,
+      "p50_ms": 13.8,
+      "top5_context_chars": 3018
+    },
+    "hybrid": {
+      "hit@1": 0.875,
+      "hit@5": 1.0,
+      "mrr@10": 0.931,
+      "p50_ms": 17.3,
+      "top5_context_chars": 3136
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 474.4,
+      "top5_context_chars": 3119
+    }
+  },
+  {
+    "variant": "Larger chunks (800)",
+    "description": "max 800 tokens per chunk",
+    "chunks": 21,
+    "avg_tokens": 182,
+    "vector": {
+      "hit@1": 0.625,
+      "hit@5": 0.975,
+      "mrr@10": 0.775,
+      "p50_ms": 20.4,
+      "top5_context_chars": 4703
+    },
+    "hybrid": {
+      "hit@1": 0.85,
+      "hit@5": 1.0,
+      "mrr@10": 0.921,
+      "p50_ms": 19.7,
+      "top5_context_chars": 5091
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 685.9,
+      "top5_context_chars": 5526
+    }
+  },
+  {
+    "variant": "Fewer candidates (10)",
+    "description": "rerank only the top 10 fused candidates",
+    "chunks": 25,
+    "avg_tokens": 154,
+    "vector": {
+      "hit@1": 0.625,
+      "hit@5": 1.0,
+      "mrr@10": 0.785,
+      "p50_ms": 17.6,
+      "top5_context_chars": 3967
+    },
+    "hybrid": {
+      "hit@1": 0.825,
+      "hit@5": 1.0,
+      "mrr@10": 0.902,
+      "p50_ms": 20.8,
+      "top5_context_chars": 4069
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 379.1,
+      "top5_context_chars": 4185
+    }
+  },
+  {
+    "variant": "Postgres ts_rank instead of BM25",
+    "description": "keyword search ranked by built-in ts_rank_cd (no IDF)",
+    "chunks": 25,
+    "avg_tokens": 154,
+    "vector": {
+      "hit@1": 0.625,
+      "hit@5": 1.0,
+      "mrr@10": 0.785,
+      "p50_ms": 17.2,
+      "top5_context_chars": 3967
+    },
+    "hybrid": {
+      "hit@1": 0.85,
+      "hit@5": 0.975,
+      "mrr@10": 0.917,
+      "p50_ms": 19.4,
+      "top5_context_chars": 4180
+    },
+    "hybrid_rerank": {
+      "hit@1": 0.95,
+      "hit@5": 1.0,
+      "mrr@10": 0.975,
+      "p50_ms": 674.7,
+      "top5_context_chars": 4211
+    }
+  }
+]

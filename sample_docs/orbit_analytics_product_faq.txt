@@ -1,0 +1,39 @@
+Orbit Analytics - Product and Pricing FAQ
+
+Last updated: October 2026. Maintained by the Product Marketing team.
+
+What is Orbit Analytics?
+Orbit Analytics is a product analytics platform that helps software teams understand how users behave inside their apps. It tracks events such as sign-ups, clicks and purchases, and turns them into funnels, retention charts, user paths and dashboards. Orbit is built for product managers, growth teams and engineers.
+
+Which plans are available?
+Orbit has four plans. The Free plan includes up to 1 million events per month, 3 seats and 30 days of data retention. The Growth plan costs USD 249 per month, includes 10 million events per month, 15 seats and 1 year of data retention. The Scale plan costs USD 1,190 per month, includes 100 million events per month, unlimited seats and 3 years of data retention. Enterprise pricing is custom and includes unlimited retention, single sign-on (SSO), a dedicated customer success manager and a 99.95% uptime SLA.
+
+Is there a discount for annual billing?
+Yes. Paying annually gives a 20% discount on the Growth and Scale plans. Startups younger than 2 years with less than USD 5 million in funding can apply to the Orbit for Startups programme, which gives the Growth plan free for 12 months.
+
+What happens if we exceed our event quota?
+Orbit never drops your data. If you exceed your monthly event quota on a paid plan, additional events are billed at USD 0.00002 per event (USD 20 per extra million). On the Free plan, ingestion continues but dashboards are paused until the next month or until you upgrade. Admins receive email alerts at 80% and 100% of the quota.
+
+What uptime does Orbit guarantee?
+The Growth and Scale plans include a 99.9% monthly uptime SLA. Enterprise customers get a 99.95% SLA. If we miss the SLA, customers receive service credits of 10% of the monthly fee for each 0.1% below the target, capped at 50% of the monthly fee.
+
+Where is data stored?
+Customers can choose to store data in the EU (Frankfurt) or US (Virginia) region. The India (Mumbai) region is available for Enterprise customers. Data never leaves the selected region, including backups.
+
+Is Orbit compliant with GDPR and SOC 2?
+Orbit is SOC 2 Type II certified and the report is renewed every year. Orbit is GDPR compliant and offers a Data Processing Agreement (DPA) to every customer. Deletion requests for individual end users are processed within 7 days via the User Deletion API.
+
+Which SDKs are supported?
+Orbit provides official SDKs for JavaScript (browser and Node.js), React Native, iOS (Swift), Android (Kotlin), Python, Go and Java. There is also an HTTP API for any other language, and integrations that import data from Segment and RudderStack.
+
+How long does it take for events to appear?
+Events usually appear in dashboards within 30 seconds of being sent. During peak load this can rise to 2 minutes. Real-time event streaming via webhooks is available on the Scale and Enterprise plans.
+
+Can we export our data?
+Yes. All paid plans can export raw events to Amazon S3, Google Cloud Storage, Snowflake or BigQuery, with daily or hourly sync. Free plan users can export up to 100,000 rows as CSV from any chart.
+
+How do we contact support?
+Free plan users get community support through the Orbit forum. Growth customers get email support with a first-response target of 24 hours. Scale customers get email and chat support with a 4-hour first-response target. Enterprise customers get a 1-hour first-response target for urgent issues, around the clock, plus a shared Slack channel.
+
+Can we cancel at any time?
+Monthly plans can be cancelled at any time and remain active until the end of the billing period. Annual plans can be cancelled, but refunds are not given for the unused part of the year, except where required by law. After cancellation, data is kept for 30 days and then permanently deleted.

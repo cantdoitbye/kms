@@ -1,0 +1,35 @@
+{
+  "index": {
+    "docs": 5183,
+    "chunks": 6659,
+    "index_seconds": 891
+  },
+  "candidates": 20,
+  "keyword_ranker": "bm25",
+  "results": {
+    "vector": {
+      "ndcg@10": 0.7115,
+      "recall@10": 0.8262,
+      "mrr@10": 0.6829,
+      "p50_ms": 29.0
+    },
+    "keyword": {
+      "ndcg@10": 0.6956,
+      "recall@10": 0.8178,
+      "mrr@10": 0.6632,
+      "p50_ms": 97.3
+    },
+    "hybrid": {
+      "ndcg@10": 0.7243,
+      "recall@10": 0.8529,
+      "mrr@10": 0.6882,
+      "p50_ms": 135.8
+    },
+    "hybrid_rerank": {
+      "ndcg@10": 0.7144,
+      "recall@10": 0.8479,
+      "mrr@10": 0.6803,
+      "p50_ms": 1170.7
+    }
+  }
+}

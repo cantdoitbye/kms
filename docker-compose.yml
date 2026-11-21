@@ -1,0 +1,52 @@
+# One command for reviewers:  docker compose up --build   ->  http://localhost:3000
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: kms-postgres
+    environment:
+      POSTGRES_USER: kms
+      POSTGRES_PASSWORD: kms
+      POSTGRES_DB: kms
+    ports:
+      - "5433:5432"
+    volumes:
+      - kms_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kms -d kms"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build: ./backend
+    container_name: kms-api
+    env_file:
+      - path: ./backend/.env   # optional: holds LLM_API_KEY
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://kms:kms@db:5432/kms
+      SEED_DIR: /sample_docs
+      UPLOAD_DIR: /data/uploads
+    volumes:
+      - ./sample_docs:/sample_docs:ro
+      - kms_uploads:/data/uploads
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        API_URL: http://api:8000
+    container_name: kms-web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  kms_pgdata:
+  kms_uploads:

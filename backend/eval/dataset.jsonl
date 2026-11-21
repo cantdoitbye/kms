@@ -1,0 +1,43 @@
+{"question": "How many days of paid annual leave do employees get?", "filename": "northwind_employee_handbook.pdf", "evidence": "24 days of paid annual leave", "type": "lexical", "answerable": true}
+{"question": "Until when can I use leave days carried over from last year?", "filename": "northwind_employee_handbook.pdf", "evidence": "expire on 31 March", "type": "paraphrase", "answerable": true}
+{"question": "Do I need a doctor's note when I'm off sick?", "filename": "northwind_employee_handbook.pdf", "evidence": "medical certificate is required only for sick leave longer than 3 consecutive days", "type": "paraphrase", "answerable": true}
+{"question": "How much parental leave does a non-birthing parent get?", "filename": "northwind_employee_handbook.pdf", "evidence": "Non-birthing parents, including adoptive parents, receive 12 weeks", "type": "lexical", "answerable": true}
+{"question": "Which days do office-based employees have to come in?", "filename": "northwind_employee_handbook.pdf", "evidence": "on-site on Tuesdays and Thursdays", "type": "paraphrase", "answerable": true}
+{"question": "How long am I allowed to work from abroad?", "filename": "northwind_employee_handbook.pdf", "evidence": "up to 30 calendar days per year", "type": "paraphrase", "answerable": true}
+{"question": "What is the yearly budget for courses and conferences?", "filename": "northwind_employee_handbook.pdf", "evidence": "annual learning budget of INR 75,000", "type": "paraphrase", "answerable": true}
+{"question": "Can I fly premium economy on a long trip?", "filename": "northwind_employee_handbook.pdf", "evidence": "may be booked in premium economy", "type": "lexical", "answerable": true}
+{"question": "I clicked a phishing link. How soon do I have to tell someone?", "filename": "northwind_employee_handbook.pdf", "evidence": "within 1 hour of discovery", "type": "paraphrase", "answerable": true}
+{"question": "When does the whole company shut down for a holiday break?", "filename": "northwind_employee_handbook.pdf", "evidence": "during the last week of December", "type": "paraphrase", "answerable": true}
+{"question": "Who has to approve a promotion to L5?", "filename": "northwind_employee_handbook.pdf", "evidence": "also need approval from the CTO", "type": "identifier", "answerable": true}
+{"question": "What is the notice period for senior staff?", "filename": "northwind_employee_handbook.pdf", "evidence": "60 days for L4 and above", "type": "paraphrase", "answerable": true}
+{"question": "How much does the company contribute to retirement savings?", "filename": "northwind_employee_handbook.pdf", "evidence": "up to 6% of base salary", "type": "paraphrase", "answerable": true}
+{"question": "What can the wellness allowance be spent on?", "filename": "northwind_employee_handbook.pdf", "evidence": "gym memberships, therapy, sports equipment or fitness apps", "type": "lexical", "answerable": true}
+{"question": "Which purchases need sign-off before I buy them?", "filename": "northwind_employee_handbook.pdf", "evidence": "before the money is spent", "type": "paraphrase", "answerable": true}
+{"question": "When can a new engineer join the primary on-call rotation?", "filename": "engineering_onboarding_guide.docx", "evidence": "at least 8 weeks", "type": "lexical", "answerable": true}
+{"question": "What language is the query service written in?", "filename": "engineering_onboarding_guide.docx", "evidence": "query service is written in Rust", "type": "lexical", "answerable": true}
+{"question": "Which team owns the Feature Flags service?", "filename": "engineering_onboarding_guide.docx", "evidence": "Feature Flags | Go | Platform | Redis", "type": "identifier", "answerable": true}
+{"question": "How many reviewers must approve a change to billing code?", "filename": "engineering_onboarding_guide.docx", "evidence": "need two approvals", "type": "paraphrase", "answerable": true}
+{"question": "How does a production rollout progress?", "filename": "engineering_onboarding_guide.docx", "evidence": "5% of traffic for 15 minutes", "type": "paraphrase", "answerable": true}
+{"question": "When does a deploy get reverted automatically?", "filename": "engineering_onboarding_guide.docx", "evidence": "error rate rises more than 2 percentage points", "type": "paraphrase", "answerable": true}
+{"question": "Can I ship to production on a Friday afternoon?", "filename": "engineering_onboarding_guide.docx", "evidence": "not allowed on Fridays after 15:00", "type": "lexical", "answerable": true}
+{"question": "How quickly must the primary on-call acknowledge a page?", "filename": "engineering_onboarding_guide.docx", "evidence": "acknowledge pages within 5 minutes", "type": "lexical", "answerable": true}
+{"question": "How much extra pay do on-call engineers get?", "filename": "engineering_onboarding_guide.docx", "evidence": "INR 8,000 per week", "type": "paraphrase", "answerable": true}
+{"question": "What does SEV2 mean?", "filename": "engineering_onboarding_guide.docx", "evidence": "SEV2 means a major feature is degraded", "type": "identifier", "answerable": true}
+{"question": "What test data do I use when running services on my laptop?", "filename": "engineering_onboarding_guide.docx", "evidence": "Acme Demo", "type": "paraphrase", "answerable": true}
+{"question": "What was the root cause of INC-2047?", "filename": "postmortem_INC-2047_billing_outage.md", "evidence": "non-backward-compatible migration deployed alongside code", "type": "identifier", "answerable": true}
+{"question": "How many customers were billed twice?", "filename": "postmortem_INC-2047_billing_outage.md", "evidence": "41 customers", "type": "paraphrase", "answerable": true}
+{"question": "How long did the invoice outage last?", "filename": "postmortem_INC-2047_billing_outage.md", "evidence": "2 hours 47 minutes", "type": "paraphrase", "answerable": true}
+{"question": "Who led the response to the billing incident?", "filename": "postmortem_INC-2047_billing_outage.md", "evidence": "Riya Deshpande", "type": "paraphrase", "answerable": true}
+{"question": "Why was nobody paged when the invoice job timed out?", "filename": "postmortem_INC-2047_billing_outage.md", "evidence": "logged at WARNING level", "type": "paraphrase", "answerable": true}
+{"question": "When is the CI check that blocks migrations mixed with code due?", "filename": "postmortem_INC-2047_billing_outage.md", "evidence": "Due: 30 September 2026", "type": "lexical", "answerable": true}
+{"question": "How much does the Growth plan cost?", "filename": "orbit_analytics_product_faq.txt", "evidence": "Growth plan costs USD 249 per month", "type": "lexical", "answerable": true}
+{"question": "What do we pay if we go over our event quota?", "filename": "orbit_analytics_product_faq.txt", "evidence": "USD 20 per extra million", "type": "paraphrase", "answerable": true}
+{"question": "What uptime is guaranteed for Enterprise customers?", "filename": "orbit_analytics_product_faq.txt", "evidence": "Enterprise customers get a 99.95% SLA", "type": "lexical", "answerable": true}
+{"question": "Can our analytics data be hosted in India?", "filename": "orbit_analytics_product_faq.txt", "evidence": "India (Mumbai) region is available for Enterprise customers", "type": "lexical", "answerable": true}
+{"question": "Is there an SDK for Android and iPhone apps?", "filename": "orbit_analytics_product_faq.txt", "evidence": "iOS (Swift), Android (Kotlin)", "type": "paraphrase", "answerable": true}
+{"question": "How fast are GDPR deletion requests handled?", "filename": "orbit_analytics_product_faq.txt", "evidence": "processed within 7 days", "type": "paraphrase", "answerable": true}
+{"question": "How quickly does support reply to Scale customers?", "filename": "orbit_analytics_product_faq.txt", "evidence": "4-hour first-response target", "type": "paraphrase", "answerable": true}
+{"question": "What happens to our data after we cancel?", "filename": "orbit_analytics_product_faq.txt", "evidence": "kept for 30 days and then permanently deleted", "type": "paraphrase", "answerable": true}
+{"question": "What is the CEO's salary?", "filename": null, "evidence": null, "type": "unanswerable", "answerable": false}
+{"question": "Does Northwind Labs offer employee stock options?", "filename": null, "evidence": null, "type": "unanswerable", "answerable": false}
+{"question": "What is the price of the Orbit Analytics mobile app on the App Store?", "filename": null, "evidence": null, "type": "unanswerable", "answerable": false}
